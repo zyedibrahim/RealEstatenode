@@ -16,7 +16,7 @@ const client = new MongoClient(MONGO_URL); // dial
 // Top level await
 await client.connect(); // call
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
